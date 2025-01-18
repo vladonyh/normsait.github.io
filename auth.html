@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #0057FF, #8B00FF);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .auth-container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .auth-container h1 {
+            margin-bottom: 10px;
+        }
+        .auth-container p {
+            margin-bottom: 20px;
+        }
+        .auth-container button {
+            background: linear-gradient(to right, #6A00FF, #A000FF);
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            font-size: 1.2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+        .auth-container button:hover {
+            background: linear-gradient(to right, #A000FF, #6A00FF);
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <h1>Любовъ</h1>
+        <p>Найди свою Любовъ</p>
+        <button onclick="location.href='swipe_profiles.html'">Создать профиль</button><br>
+        <button onclick="location.href='swipe_profiles.html'">Войти</button>
+        <p style="font-size: 0.8rem; margin-top: 15px;">Продолжая, вы принимаете условия соглашения и конфиденциальности. Мы используем рекомендательные технологии.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="C:\Users\vladi\OneDrive\Desktop\Проектик\CSS\base.css">
+        <link rel="stylesheet" href="C:\Users\vladi\OneDrive\Desktop\Проектик\CSS\variables.css">
+        <link rel="stylesheet" href="C:\Users\vladi\OneDrive\Desktop\Проектик\CSS\light-theme.css" id="light-theme-styles">
+        <link rel="stylesheet" href="C:\Users\vladi\OneDrive\Desktop\Проектик\CSS\dark-theme.css" id="dark-theme-styles">
+        <link rel="stylesheet" href="C:\Users\vladi\OneDrive\Desktop\Проектик\CSS\popup.css">
+        <link rel="stylesheet" href="C:\Users\vladi\OneDrive\Desktop\Проектик\CSS\notifications.css">
+        <link rel="stylesheet" href="C:\Users\vladi\OneDrive\Desktop\Проектик\CSS\responsive.css">
+        <link rel="stylesheet" href="C:\Users\vladi\OneDrive\Desktop\Проектик\CSS\actions.css">
+        
+        <title>Анкеты</title>
+    </head>
+<body>
+    <div class="navbar">
+        <div class="navbar-group">
+            <a href="swipe_profiles.html"><button class="active">Любовъ</button></a>
+            <a href="swipe_profiles.html"><button>Анкеты</button></a>
+            <a href="nearby.html"><button>Рядом</button></a>
+        </div>
+
+        <div class="navbar-group">
+            <button onclick="toggleNotifications()">Уведомления</button>
+            <a href="profile.html"><button>Профиль</button></a>
+            <button id="openModalBtn">ВИП-Статус</button>
+        </div>
+
+        <button class="theme-toggle" id="themeToggleButton" onclick="toggleTheme()">🌙</button>
+    </div>
+    <div class="user-card">
+        <img src="user1.jpg" alt="User Photo" class="user-photo">
+        <div class="user-info">
+            <p>Name: John Doe</p>
+            <p>Age: 25</p>
+            <p>Status: <span class="status-online">Online</span></p>
+        </div>
+    </div>
+    <div class="user-card">
+        <img src="user2.jpg" alt="User Photo" class="user-photo">
+        <div class="user-info">
+            <p>Name: Jane Smith</p>
+            <p>Age: 30</p>
+            <p>Status: <span class="status-offline">Offline</span></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,170 @@
+/* -------------------------
+   1. Общие стили для попапа
+   ------------------------- */
+
+/* Общие стили для попапа */
+.popup {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Фиксированное позиционирование */
+    top: 50%; /* Центр по вертикали */
+    left: 50%; /* Центр по горизонтали */
+    transform: translate(-50%, -50%); /* Смещение на 50% от ширины и высоты попапа */
+    width: 100vw; /* Занимает всю ширину экрана */
+    height: 100vh; /* Занимает всю высоту экрана */
+    background-color: rgba(0, 0, 0, 0.8); /* Тёмный полупрозрачный фон */
+    z-index: 1000; /* Поверх других элементов */
+    display: flex; /* Flex для центрирования */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+}
+
+/* Состояние попапа, когда он видим */
+.popup--visible {
+    display: flex; /* Показываем попап */
+}
+
+/* -----------------------------
+   2. Стили для содержимого попапа
+   ----------------------------- */
+.popup-content {
+    background-color: #1c1c1c; /* Тёмный фон */
+    color: #ffffff; /* Светлый текст */
+    padding: 20px 30px; /* Отступы внутри */
+    border-radius: 15px; /* Округлённые углы */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Лёгкая тень для содержимого */
+    max-width: 400px; /* Ограничение по ширине */
+    text-align: center; /* Центрирование текста */
+}
+
+/* --------------------------
+   3. Стили для кнопки закрытия
+   -------------------------- */
+button.close {
+    background-color: #ff4c4c; /* Красная кнопка */
+    color: #ffffff; /* Белый текст кнопки */
+    border: none; /* Без границ */
+    padding: 10px 20px; /* Отступы */
+    border-radius: 5px; /* Скруглённые углы */
+    cursor: pointer; /* Указатель при наведении */
+    font-size: 14px;
+}
+
+button.close:hover {
+    background-color: #e04343; /* Светлее при наведении */
+}
+
+/* ------------------------------
+   4. Стили для кнопки внутри попапа
+   ------------------------------ */
+.popup button {
+    margin-top: 20px; /* Отступ сверху */
+    padding: 10px 20px; /* Отступы */
+    border: none; /* Без границ */
+    background-color: #007BFF; /* Основной цвет кнопки */
+    color: white; /* Белый текст */
+    border-radius: 5px; /* Скруглённые углы */
+    cursor: pointer; /* Указатель при наведении */
+}
+
+.popup button:hover {
+    background-color: #0056b3; /* Светлее при наведении */
+}
+
+/* --------------------------
+   5. Стили бокового меню
+   -------------------------- */
+.sidebar {
+    position: fixed; /* Фиксированное позиционирование */
+    top: 0; /* Позиция сверху */
+    left: -250px; /* Скрыто по левому краю */
+    height: 100%; /* Высота на весь экран */
+    width: 250px; /* Ширина меню */
+    background: rgba(0, 0, 0, 0.9); /* Темный фон */
+    color: white; /* Белый текст */
+    display: flex; /* Flex-контейнер */
+    flex-direction: column; /* Выстраивание элементов по вертикали */
+    align-items: start; /* Выравнивание по левому краю */
+    padding: 20px; /* Отступы */
+    transition: left 0.3s ease; /* Плавный переход */
+    z-index: 99; /* Слой выше контента */
+}
+
+
+/* -----------------------
+   8. Стили для кнопок действий
+   ----------------------- */
+.actions button {
+    background: none; /* Без фона */
+    border: none; /* Без границ */
+    font-size: 2rem; /* Размер шрифта */
+    cursor: pointer; /* Указатель при наведении */
+    padding: 10px; /* Отступы */
+    border-radius: 50%; /* Кнопка круглая */
+    transition: transform 0.3s, box-shadow 0.3s; /* Плавный переход */
+}
+
+/* Стили для кнопки лайка */
+.actions .like {
+    background-color: var(--like-bg);
+    color: white;
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.actions .like:hover {
+    background-color: var(--like-bg-hover);
+    transform: scale(1.1); /* Увеличение при наведении */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Стили для кнопки дизлайка */
+.actions .dislike {
+    background-color: var(--dislike-bg);
+    color: white;
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.actions .dislike:hover {
+    background-color: var(--dislike-bg-hover);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Стили для кнопки подарка */
+.actions .gift {
+    color: #ffc107;
+}
+
+/* Стили для кнопки отмены */
+.actions .undo {
+    color: grey;
+}
+
+/* ------------------------
+   9. Общие переменные цветов
+   ------------------------ */
+:root {
+    --popup-bg: #1c1c1c;
+    --popup-shadow: rgba(0, 0, 0, 0.5);
+    --button-close-bg: #ff4c4c;
+    --button-close-hover: #e04343;
+    --button-primary-bg: #007BFF;
+    --button-primary-hover: #0056b3;
+    --like-bg: #28a745;
+    --like-bg-hover: #218838;
+    --dislike-bg: #dc3545;
+    --dislike-bg-hover: #c82333;
+}

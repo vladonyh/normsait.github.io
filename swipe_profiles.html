@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="C:\Users\vladi\OneDrive\Desktop\Проектик\CSS\base.css">
+    <link rel="stylesheet" href="C:\Users\vladi\OneDrive\Desktop\Проектик\CSS\variables.css">
+    <link rel="stylesheet" href="C:\Users\vladi\OneDrive\Desktop\Проектик\CSS\light-theme.css" id="light-theme-styles">
+    <link rel="stylesheet" href="C:\Users\vladi\OneDrive\Desktop\Проектик\CSS\dark-theme.css" id="dark-theme-styles">
+    <link rel="stylesheet" href="C:\Users\vladi\OneDrive\Desktop\Проектик\CSS\popup.css">
+    <link rel="stylesheet" href="C:\Users\vladi\OneDrive\Desktop\Проектик\CSS\notifications.css">
+    <link rel="stylesheet" href="C:\Users\vladi\OneDrive\Desktop\Проектик\CSS\responsive.css">
+    <link rel="stylesheet" href="C:\Users\vladi\OneDrive\Desktop\Проектик\CSS\actions.css">
+    
+    <title>Анкеты</title>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="navbar-group">
+            <a href="swipe_profiles.html"><button class="active">Любовъ</button></a>
+            <a href="swipe_profiles.html"><button>Анкеты</button></a>
+            <a href="nearby.html"><button>Рядом</button></a>
+        </div>
+
+        <div class="navbar-group">
+            <button onclick="toggleNotifications()">Уведомления</button>
+            <a href="profile.html"><button>Профиль</button></a>
+            <button id="openModalBtn">ВИП-Статус</button>
+        </div>
+
+        <button class="theme-toggle" id="themeToggleButton" onclick="toggleTheme()">🌙</button>
+    </div>
+
+    <!-- Гамбургер-меню -->
+    <div class="hamburger-menu" onclick="toggleMenu()">☰</div>
+
+    <!-- Боковое меню -->
+    <nav class="sidebar" id="sidebar">
+        <button onclick="toggleMenu()">Закрыть</button>
+        <a href="swipe_profiles.html"><button>Любовъ</button></a>
+        <a href="swipe_profiles.html"><button>Анкеты</button></a>
+        <a href="nearby.html"><button>Рядом</button></a>
+        <button onclick="toggleNotifications()">Уведомления</button>
+        <a href="profile.html"><button>Профиль</button></a>
+        <button id="openModalBtn">ВИП-Статус</button>
+    </nav>
+
+    <div class="wrapper">
+        <div class="main-content">
+            <!-- Основной контент -->
+
+            <div class="photo-container">
+                <img src="file:///C:/Users/vladi/OneDrive/Desktop/Проектик/i.webp" alt="Фото профиля">
+                <button class="undoButton" id="undoButton" onclick="undoAction()">↩</button>
+                <div class="actions">
+                    <button class="dislike" onclick="swipe('left')">❌</button>
+                    <button class="superlike" onclick="sendGift()">💎</button>
+                    <button class="like" onclick="swipe('right')">❤️</button>
+                </div>
+            </div>
+            <div class="info-container">
+                <h2>Анна, 25</h2>
+                <div class="status online">
+                    <span></span>
+                    <p>Статус: Онлайн</p>
+                </div>
+                <p><strong>Описание:</strong> Люблю путешествия, книги и встречи с друзьями.</p>
+                <h3>Интересы:</h3>
+                <ul>
+                    <li>Путешествия</li>
+                    <li>Книги</li>
+                    <li>Музыка</li>
+                </ul>
+            </div>
+        </div>
+        <footer class="footer">
+            <p>&copy; 2025 Сайт знакомств. Все права защищены.</p>
+        </footer>
+    </div>
+
+    <!-- Попап ВИП-Статуса -->
+    <div id="vipModal" class="popup">
+        <div class="popup-content">
+            <h2>ВИП-Статус</h2>
+            <p>Покупка ВИП-статуса дает вам доступ к эксклюзивным функциям.</p>
+            <button id="closeModalBtn" class="close">Закрыть</button>
+        </div>
+    </div>
+
+    <script src="C:\Users\vladi\OneDrive\Desktop\Проектик\JS\script.js" defer></script>
+</body>
+</html>

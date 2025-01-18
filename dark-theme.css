@@ -1,0 +1,124 @@
+/* ========================
+   1. ОБЩИЕ СТИЛИ ДЛЯ ТЕМНОЙ ТЕМЫ
+   ======================== */
+
+/* Устанавливаем фон и цвет текста для всего тела страницы в темной теме */
+body[data-theme="light"] {
+    background-color: var(--background-light);
+    color: #000;  /* Цвет текста для светлой темы */
+}
+
+:root {
+    --background-dark: #121212;   /* Темный фон */
+    --navbar-dark: #333333;        /* Цвет навигационной панели для темной темы */
+    --content-dark: #1c1c1c;       /* Фон контейнера с информацией для темной темы */
+    --shadow-dark: rgba(255, 255, 255, 0.1); /* Тень для темной темы */
+}
+
+
+
+/* ========================
+   2. НАВИГАЦИОННАЯ ПАНЕЛЬ
+   ======================== */
+
+/* Стили кнопок на панели навигации */
+
+.navbar {
+    background-color: var(--navbar-light);  /* Для светлой темы */
+    box-shadow: 0 2px 5px var(--shadow-light); /* Легкая тень */
+}
+
+body[data-theme="dark"] .navbar {
+    background-color: var(--navbar-dark);  /* Для темной темы */
+    box-shadow: 0 2px 5px var(--shadow-dark); /* Легкая тень */
+}
+
+body.dark-theme .navbar button {
+    background-color: var(--background-dark); /* Темный фон кнопки */
+    color: var(--text-light); /* Светлый текст на кнопке */
+    box-shadow: 0 4px 10px var(--shadow-dark); /* Тень для кнопки */
+}
+
+/* При наведении на кнопку, меняется фон и цвет текста */
+body.dark-theme .navbar button:hover {
+    background-color: var(--container-dark); /* Темный фон при наведении */
+    color: var(--text-light); /* Светлый текст при наведении */
+}
+
+/* Кнопка активного состояния на навигационной панели */
+body.dark-theme .navbar button.active {
+    color: var(--button-active-color); /* Цвет активной кнопки */
+}
+
+/* Для темной темы */
+body[data-theme="dark"] button {
+    background-color: #007bff;  /* Синий фон для темной темы */
+    color: white;  /* Белый текст */
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);  /* Легкая светлая тень */
+}
+
+/* ========================
+   3. ОКНО ИНФОРМАЦИИ (info-container)
+   ======================== */
+
+/* Стили контейнера с информацией в темной теме */
+
+.main-content {
+    background-color: var(--content-light);  /* Для светлой темы */
+    box-shadow: 0 4px 10px var(--shadow-light); /* Тень для контейнера */
+}
+
+/* Для темной темы */
+body[data-theme="dark"] .main-content {
+    background-color: var(--content-dark);  /* Для темной темы */
+    box-shadow: 0 4px 10px var(--shadow-dark); /* Тень для контейнера */
+}
+
+body.dark-theme .info-container {
+    background-color: var(--container-dark); /* Темный фон контейнера */
+    color: var(--text-dark); /* Темный текст в контейнере */
+    box-shadow: 0 6px 25px var(--shadow-dark); /* Тень для контейнера */
+}
+
+/* ========================
+   4. КНОПКА ПЕРЕКЛЮЧЕНИЯ ТЕМЫ
+   ======================== */
+
+/* Стили кнопки переключения темы */
+body.dark-theme .theme-toggle {
+    background-color: var(--background-dark); /* Темный фон для кнопки */
+    color: var(--text-light); /* Светлый текст для кнопки */
+}
+
+/* Эффект при наведении на кнопку переключения темы */
+body.dark-theme .theme-toggle:hover {
+    transform: scale(1.1); /* Легкое увеличение кнопки при наведении */
+}
+
+/* ========================
+   5. СТИЛИ ДЛЯ КНОПОК В ТЕМНОЙ ТЕМЕ (Градиенты и анимация)
+   ======================== */
+
+/* Градиентный фон для кнопок на панели навигации */
+body.dark-theme .navbar button {
+    background: linear-gradient(90deg, var(--button-gradient-start), var(--button-gradient-end)); /* Градиент фона */
+    background-size: 200% auto;
+    animation: gradientShift 3s linear infinite; /* Анимация градиента */
+}
+
+/* Изменение фона и цвета текста кнопки при наведении */
+body.dark-theme .navbar button:hover {
+    background: linear-gradient(90deg, var(--button-hover-gradient-start), var(--button-hover-gradient-end)); /* Новый градиент */
+    color: var(--button-active-color); /* Новый цвет текста */
+}
+
+/* ========================
+   6. ДОПОЛНИТЕЛЬНЫЕ СТИЛИ ДЛЯ ИНФОРМАЦИОННОГО КОНТЕЙНЕРА
+   ======================== */
+
+/* Дополнительные стили для контейнера с информацией */
+.dark-theme .info-container {
+    background-color: #333; /* Темный фон контейнера */
+    color: #fff; /* Белый текст */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Легкая тень для контейнера */
+}

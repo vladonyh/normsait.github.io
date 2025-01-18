@@ -1,0 +1,114 @@
+/* ========================
+   1. ОБЩИЕ СТИЛИ ДЛЯ СВЕТЛОЙ ТЕМЫ
+   ======================== */
+
+/* Устанавливаем фон и цвет текста для всего тела страницы в светлой теме */
+/* Основной фон для страницы */
+body[data-theme="light"] {
+    background-color: var(--background-light);
+    color: #000;  /* Цвет текста для светлой темы */
+}
+
+/* ------------------ Основные переменные для фонов ------------------ */
+:root {
+    --background-light: #f5f5f5;  /* Светлый фон */
+   
+    --content-light: #ffffff;      /* Фон контейнера с информацией для светлой темы */
+    --shadow-light: rgba(0, 0, 0, 0.1); /* Тень для светлой темы */
+}
+
+
+
+/* ========================
+   2. НАВИГАЦИОННАЯ ПАНЕЛЬ
+   ======================== */
+
+/* Стили кнопок на панели навигации */
+.navbar {
+    background-color: var(--navbar-light);  /* Для светлой темы */
+    box-shadow: 0 2px 5px var(--shadow-light); /* Легкая тень */
+}
+
+body.light-theme .navbar button {
+    background-color: var(--background-light); /* Светлый фон кнопки */
+    color: var(--text-dark); /* Темный текст на кнопке */
+    box-shadow: 0 4px 10px var(--shadow-light); /* Тень для кнопки */
+}
+
+/* При наведении на кнопку, меняется фон и цвет текста */
+body.light-theme .navbar button:hover {
+    background-color: var(--container-light); /* Светлый фон при наведении */
+    color: var(--text-dark); /* Темный текст при наведении */
+}
+
+/* Кнопка активного состояния на навигационной панели */
+body.light-theme .navbar button.active {
+    color: var(--button-active-color); /* Цвет активной кнопки */
+}
+
+/* Для светлой темы */
+body[data-theme="light"] button {
+    background-color: #4CAF50;  /* Зеленый фон для светлой темы */
+    color: white;  /* Белый текст */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Легкая тень */
+}
+
+/* ========================
+   3. ОКНО ИНФОРМАЦИИ (info-container)
+   ======================== */
+
+/* Стили контейнера с информацией в светлой теме */
+
+.main-content {
+    background-color: var(--content-light);  /* Для светлой темы */
+    box-shadow: 0 4px 10px var(--shadow-light); /* Тень для контейнера */
+}
+
+body.light-theme .info-container {
+    background-color: var(--container-light); /* Светлый фон контейнера */
+    color: var(--text-light); /* Светлый текст в контейнере */
+    box-shadow: 0 6px 20px var(--shadow-light); /* Тень для контейнера */
+}
+
+/* ========================
+   4. КНОПКА ПЕРЕКЛЮЧЕНИЯ ТЕМЫ
+   ======================== */
+
+/* Стили кнопки переключения темы */
+body.light-theme .theme-toggle {
+    background-color: var(--background-light); /* Светлый фон для кнопки */
+    color: var(--text-dark); /* Темный текст для кнопки */
+}
+
+/* Эффект при наведении на кнопку переключения темы */
+body.light-theme .theme-toggle:hover {
+    transform: scale(1.1); /* Легкое увеличение кнопки при наведении */
+}
+
+/* ========================
+   5. СТИЛИ ДЛЯ КНОПОК В СВЕТЛОЙ ТЕМЕ (Градиенты и анимация)
+   ======================== */
+
+/* Градиентный фон для кнопок на панели навигации */
+body.light-theme .navbar button {
+    background: linear-gradient(90deg, var(--button-gradient-start), var(--button-gradient-end)); /* Градиент фона */
+    background-size: 200% auto;
+    animation: gradientShift 3s linear infinite; /* Анимация градиента */
+}
+
+/* Изменение фона и цвета текста кнопки при наведении */
+body.light-theme .navbar button:hover {
+    background: linear-gradient(90deg, var(--button-hover-gradient-start), var(--button-hover-gradient-end)); /* Новый градиент */
+    color: var(--button-active-color); /* Новый цвет текста */
+}
+
+/* ========================
+   6. ДОПОЛНИТЕЛЬНЫЕ СТИЛИ ДЛЯ ИНФОРМАЦИОННОГО КОНТЕЙНЕРА
+   ======================== */
+
+/* Дополнительные стили для контейнера с информацией */
+.light-theme .info-container {
+    background-color: #fff; /* Белый фон контейнера */
+    color: #000; /* Черный текст */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Легкая тень для контейнера */
+}
